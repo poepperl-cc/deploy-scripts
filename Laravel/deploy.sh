@@ -108,6 +108,8 @@ elif [ $LOCAL = $BASE ] || [ "$FORCE" = true ]; then
     
     permissions
 
+    php artisan queue:restart
+
 elif [ $REMOTE = $BASE ]; then
     echo "Need to push"
 else
